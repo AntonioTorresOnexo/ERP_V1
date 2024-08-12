@@ -1,30 +1,38 @@
-// src/components/Login.js
 import React from 'react';
-import './Login.css';
+import '../../styles/Login.css';
+import Input from '../global/Input.jsx'; 
+import Button from '../global/Button.jsx'; 
 
 const Login = () => {
     return (
         <div className="container">
             <div className="left-panel">
-                <img src="logo.png" alt="Logo" className="logo" />
+                <img src='/image.png' alt="Aqui va el logo" className="logo"/>
                 <h1>BIENVENIDO</h1>
                 <div className="form-group">
                     <label>Crea tu ID de usuario</label>
-                    <input type="text" placeholder="Usuario" />
+                    <Input
+                        type="text" 
+                        placeholder="Usuario" />
                 </div>
                 <div className="form-group">
                     <label>Ingresa tu contraseña</label>
-                    <input type="password" placeholder="Contraseña" />
+                    <Input 
+                        type="password" 
+                        placeholder="Contraseña" />
                 </div>
                 <a href="#" className="forgot-password">¿Olvidó su contraseña?</a>
                 <p className="password-hint">
-                    La contraseña debe contener:
+                    <b>La contraseña debe contener:</b>
                     <br />• Al menos una letra mayúscula
                     <br />• Al menos un carácter especial
                     <br />• 8 caracteres.
                 </p>
-                <button>INICIAR</button>
+                <Button 
+                    text="INICIAR" />
+                    <footer>© 2024 ONEXO | Todos los derechos reservados</footer>
             </div>
+            
             <div className="right-panel"></div>
         </div>
     );
